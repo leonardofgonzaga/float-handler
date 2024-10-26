@@ -93,13 +93,13 @@ class FloatNumber
     /**
      * Multiplies the current value by the value entered
      * 
-     * @param float $number Number to be multiplied 
+     * @param FloatNumber $number Number to be multiplied 
      * @return FloatNumber Returns the result as a FloatNumber object setted 
      * with current decimals and epsilon values
      */
     public function times(FloatNumber $number): FloatNumber
     {
-        $result = $this->value * $this->exact($number);
+        $result = $this->value * $this->exact($number->getValue());
 
         return new FloatNumber(
             $result,
